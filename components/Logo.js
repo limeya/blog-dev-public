@@ -7,7 +7,7 @@ const Logo = () => (
     <Image
       boxSize="50px"
       borderRadius="full"
-      src="https://bit.ly/dan-abramov"
+      src="/images/logo.png"
       alt="limeya"
     ></Image>
     {/* <Spacer /> */}
