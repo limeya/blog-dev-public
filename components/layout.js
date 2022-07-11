@@ -13,10 +13,10 @@ import Header from "./header";
 const Layout = ({ children }) => (
   <Grid
     // gridTemplate="auto 1fr auto / 1fr"
-    templateRows="1fr 1fr 20fr auto"
+    templateRows="1fr 1fr 15fr auto"
     margin="0em 15em"
-    padding="1.5em 0"
-    gap={6}
+    padding="0em 0"
+    gap={4}
   >
     <GridItem rowStart={1}>
       <Header />
