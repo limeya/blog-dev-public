@@ -15,7 +15,7 @@ const Layout = ({ children }) => (
     // gridTemplate="auto 1fr auto / 1fr"
     templateRows="1fr 1fr 15fr auto"
     margin="0em 15em"
-    padding="0em 0"
+    padding="1.5em 0"
     gap={4}
   >
     <GridItem rowStart={1}>
