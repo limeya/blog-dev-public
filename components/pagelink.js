@@ -1,19 +1,17 @@
+import { UnorderedList, ListItem } from "@chakra-ui/react";
 import Link from "next/link";
-const Pagelink = (props) => {
-	const link = `/${props.postsdir}/${props.id}`;
+const Postlink = (props) => {
+  const link = `/${props.postsdir}/${props.id}`;
 
-	return (
-		<article>
-			<h3>
-				<Link href={link}>{props.title}</Link>
-			</h3>
-			<p className="time">
-				发布时间：
-				<time>{props.date}</time>
-			</p>
-			<p>{props.description}</p>
-		</article>
-	);
+  return (
+    <ListItem marginBottom='0.7em'>
+        <Link href={link}>
+          <a>
+            {props.date} : {props.title}
+          </a>
+        </Link>
+    </ListItem>
+  );
 };
 
-export default Pagelink;
+export default Postlink;
