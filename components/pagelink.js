@@ -1,7 +1,7 @@
 import { UnorderedList, ListItem } from "@chakra-ui/react";
 import Link from "next/link";
 const Postlink = (props) => {
-  const link = `/${props.postsdir}/${props.id}`;
+  const link = `/${props.postsDir}/${props.id}`;
 
   return (
     <ListItem marginBottom='0.7em'>

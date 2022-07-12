@@ -1,17 +1,16 @@
 import Layout from "../../components/layout";
 
-import { getAllFiles } from "../../libs/post-processor";
+import { getAllPostData } from "../../libs/post-processor";
 import Head from "next/head";
 import Link from "next/link";
 
 import Postlink from "../../components/pagelink";
 import { Center, Flex, UnorderedList } from "@chakra-ui/react";
 
-const postsDir = "articles";
+const postsDir = "posts";
 
 export async function getStaticProps() {
-  const posts = await getAllFiles(postsDir);
-  // console.log(posts);
+  const posts = getAllPostData(postsDir);
   return {
     props: {
       postsData: posts,
@@ -20,7 +19,6 @@ export async function getStaticProps() {
 }
 
 export default function Posts({ postsData }) {
-  // console.log(postsData);
   return (
     <Layout>
       <Head>
@@ -33,7 +31,7 @@ export default function Posts({ postsData }) {
           {postsData.map((post) => (
             <Postlink
               key={post.id}
-              postsdir={postsDir}
+              postsDir={postsDir}
               id={post.id}
               title={post.title}
               description={post.description}
